@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "531778ee-7c6e-4954-8bd9-257bcde0c9a3",
+		"name": "node auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13959093"
+	},
+	"item": [
+		{
+			"name": "v2",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"v12@gmail.com\",\n    \"password\": \"new\",\n    \"username\": \"v2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/v2/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"v2@gmail.com\",\n    \"password\": \"new\",\n    \"username\": \"v2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/v2/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "get Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InYyIiwiZW1haWwiOiJ2MkBnbWFpbC5jb20iLCJpYXQiOjE3MTEzNzUwNzYsImV4cCI6MTcxMTM3NTEzNn0.y5m9CTvt2hCoip4nNEj7sqLa9-7YwMeUUP0Cmub5lR0",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/v2/users"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteuser Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InYyIiwiZW1haWwiOiJ2MTJAZ21haWwuY29tIiwiaWF0IjoxNzExMzc1MDMxLCJleHAiOjE3MTEzNzUwOTF9.JK3LVLjIXesAAs2TBJ4xFBP3wfWQlnKhQV0hYPb2mEs",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/v2/users/6601828c6376cd44f34c94c4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"new231@gmail.com\",\n    \"password\": \"new\",\n    \"username\": \"new1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v2/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"new231@gmail.com\",\n    \"password\": \"new\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v2/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ldzEiLCJlbWFpbCI6Im5ldzIzMUBnbWFpbC5jb20iLCJpYXQiOjE3MzA4NDYzNTEsImV4cCI6MTczMDg0NjQxMX0.v7G6LRf64CkBO20ufFYnWGTSccMbHe-dIKMrQ_lv0iU",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8080/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteuser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/users/660037998eac288a0dc4f62e"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"new-2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/users/660064a66f63150fcaade332"
+			},
+			"response": []
+		}
+	]
+}
